@@ -56,7 +56,6 @@ void registerModManageCommand(bool isClientSide) {
                 "LeviLamina's main command"_tr(),
                 isClientSide ? CommandPermissionLevel::Any : config.permission
             )
-            .alias(isClientSide ? "clill" : "ll");
     cmd.overload<LeviCommand3>().text("load").required("mod").execute(
         [](CommandOrigin const& origin, CommandOutput& output, LeviCommand3 const& param) {
             if (ll::mod::ModManagerRegistry::getInstance().hasMod(param.mod)) {
