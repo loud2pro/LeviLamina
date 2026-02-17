@@ -28,9 +28,9 @@ LL_TYPE_STATIC_HOOK(
 ) {
     if (!isHost) {
         origin(minecraftCommands, minecraftGame, textureGroup, archiver, isHost, adIdentity, scriptingEnabled, level);
-        registerVersionCommand(true);
-        registerCrashCommand(true);
-        registerModManageCommand(true);
+        //registerVersionCommand(true);
+        //registerCrashCommand(true);
+        //registerModManageCommand(true);
         return;
     }
     origin(minecraftCommands, minecraftGame, textureGroup, archiver, isHost, adIdentity, scriptingEnabled, level);
@@ -45,10 +45,10 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
     ::ServerInstance& ins
 ) {
     auto res = origin(ins);
-    registerVersionCommand(false);
-    registerCrashCommand(false);
-    registerModManageCommand(false);
-    registerTpdimCommand(false);
+   // registerVersionCommand(false);
+    //registerCrashCommand(false);
+    //registerModManageCommand(false);
+    //registerTpdimCommand(false);
     return res;
 }
 
