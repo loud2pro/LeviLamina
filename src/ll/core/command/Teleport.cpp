@@ -36,8 +36,8 @@ void registerTpdimCommand(bool isClientSide) {
         return;
     }
     auto& cmd = CommandRegistrar::getInstance(isClientSide)
-                    .getOrCreateCommand("teleportdim", "commands.tp.description", config.permission)
-                    .alias("tpdim");
+                    .getOrCreateCommand("teleportdim", "commands.tp.description", config.permission);
+                    
 
     cmd.overload<TpSelf>()
         .required("destination")
